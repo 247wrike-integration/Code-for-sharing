@@ -1,0 +1,37 @@
+Code:
+
+import requests
+#import urllib.request
+url = "https://www.sourceclear.com/vulnerability-database/search#query=jetty-9.2.13"
+#request = urllib.request.Request(url)
+headers = {'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36 OPR/54.0.2952.64'}
+#response = urllib.request.urlopen(request)
+
+#print (response.read().decode('utf-8'))
+
+response = requests.get(url, headers=headers)
+print(response.content)
+
+
+
+Output:
+
+C:\Users\tulsi.rao\Desktop\py\pycharm\venv\Scripts\python.exe C:/Users/tulsi.rao/Desktop/py/pycharm/scrape_test2.py
+Traceback (most recent call last):
+  File "C:/Users/tulsi.rao/Desktop/py/pycharm/scrape_test2.py", line 10, in <module>
+    response = requests.get(url, headers=headers)
+  File "C:\Users\tulsi.rao\Desktop\py\pycharm\venv\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\tulsi.rao\Desktop\py\pycharm\venv\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\tulsi.rao\Desktop\py\pycharm\venv\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Users\tulsi.rao\Desktop\py\pycharm\venv\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Users\tulsi.rao\Desktop\py\pycharm\venv\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Users\tulsi.rao\Desktop\py\pycharm\venv\lib\site-packages\requests\models.py", line 438, in prepare_headers
+    for header in headers.items():
+AttributeError: 'set' object has no attribute 'items'
+
+Process finished with exit code 1
