@@ -1,0 +1,30 @@
+Code:
+
+
+import scrapy
+import requests
+import pywebber
+from bs4 import BeautifulSoup
+from scrapy_splash import SplashRequest
+#import libraries
+#import urllib2
+#from bs4 import BeautifulSoup
+
+#from urllib.request import urlopen
+#from bs4 import BeautifulSoup
+#html = urlopen("https://www.sourceclear.com/vulnerability-database/search#query=jetty-9.2.13")
+#bsObj = BeautifulSoup(html.read())
+#print(bsObj.h1)
+
+from pywebber import Ripper
+page = Ripper(url='https://www.sourceclear.com/vulnerability-database/search#query=jetty-9.2.13', parser='html5lib')
+
+page_soup = page.soup
+print
+
+
+Output:
+
+C:\Users\tulsi.rao\Desktop\py\pycharm\venv\Scripts\python.exe C:/Users/tulsi.rao/Desktop/py/pycharm/Scraping_dummy.py
+
+Process finished with exit code 0
