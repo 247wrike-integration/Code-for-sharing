@@ -1,0 +1,24 @@
+Code:
+
+import scrapy
+import requests
+from bs4 import BeautifulSoup
+from scrapy_splash import SplashRequest
+page = requests.get('https://www.sourceclear.com/vulnerability-database/search#query=jetty-9.2.13')
+
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+html = urlopen("https://www.sourceclear.com/vulnerability-database/search#query=jetty-9.2.13")
+bsObj = BeautifulSoup(html.read());
+print(html.read())
+print(bsObj)
+
+
+Output:
+
+b''
+<!DOCTYPE html>
+<html lang="en"><head><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta charset="utf-8"/><meta content="summary" name="twitter:card"/><meta content="@srcclr" name="twitter:site"/><meta content="https://www.sourceclear.com/images/srcclr__logo--stacked-grey--whitebg.png" name="twitter:image"/><meta content="@srcclr" name="twitter:creator"/><meta content="https://www.sourceclear.com/images/srcclr__logo--stacked-grey--whitebg.png" property="og:image"/><meta content="https://www.sourceclear.com/images/srcclr__logo--stacked-grey--whitebg.png" property="og:image:secure_url"/><meta content="website" property="og:type"/><meta content="SourceClear" property="og:site_name"/><meta content="devsec,open source,open-source,vulnerability,security,risk,threat,issue,CVE,Ruby on Rails,Django,Node,npm,Spring,Java,Apache" name="keywords"/><meta content="width=1280,initial-scale=0.6" name="viewport"/><meta content="mDawj1qeJfp3syqOUAJ7ZZUZl3EVZIYHMRbNzjfbQzc" name="google-site-verification"/><title>SourceClear</title><script src="/vulnerability-database/vendors/env.js"></script><link href="/vulnerability-database/main.992dc94a15a73d7b87ca4090cc0abe3e.css" rel="stylesheet"/></head><body><noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5WZSNNP" style="display:none;visibility:hidden" width="0"></iframe></noscript><div class="body-wrap container--full bo--0 is-loaded" id="app"></div><script src="/vulnerability-database/main.10d57d778bb40652a35a.js" type="text/javascript"></script></body></html>
+
+Process finished with exit code 0
